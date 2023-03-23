@@ -1,0 +1,5 @@
+# Week 2: Radar sensor
+
+This week's learning diary task is to review a single sensor type, including its applications in a modern setting as well as research that has been conducted using data obtained from the chosen sensor.
+
+The xaringan presentation link for this task can be found [here](https://farhankhai552.github.io/radar-sensor-presentation/).

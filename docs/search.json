@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Remote Sensing Learning Diary",
     "section": "",
-    "text": "Purpose\nThis learning diary acts as an assignment for the module CASA00023 Remote Sensing Cities and Environment. Each week covers a different topic pertaining to remote sensing.\nThis book is created from R markdown and executable code."
+    "text": "Purpose\nThis learning diary acts as an assignment for the module CASA00023 Remote Sensing Cities and Environment. Each week covers a different topic pertaining to remote sensing.\nThis book is created using R markdown and executable code."
   },
   {
     "objectID": "week1.html",
