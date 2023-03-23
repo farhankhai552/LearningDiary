@@ -1,0 +1,32 @@
+{
+  "index.qmd": {
+    "index.html": "221ff96b"
+  },
+  "intro.qmd": {
+    "intro.html": "95d4215e"
+  },
+  "summary.qmd": {
+    "summary.html": "f1cf4356"
+  },
+  "references.qmd": {
+    "references.html": "b52991d7"
+  },
+  "wk1.qmd": {
+    "wk1.html": "d096ed54"
+  },
+  "week1.qmd": {
+    "week1.html": "7f6b3a22"
+  },
+  "week2.qmd": {
+    "week2.html": "3d8172f7"
+  },
+  "week3.qmd": {
+    "week3.html": "ce7aeed8"
+  },
+  "week4.qmd": {
+    "week4.html": "b0d643e6"
+  },
+  "week5.qmd": {
+    "week5.html": "b85e5473"
+  }
+}

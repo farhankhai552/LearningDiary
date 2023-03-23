@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Remote Sensing Learning Diary - 2&nbsp; Week 3: Image Correction and Data Joining</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./week4.html" rel="next">
+<link href="./week1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 3: Image Correction and Data Joining</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Remote Sensing Learning Diary</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 3: Image Correction and Data Joining</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 5: Data Classification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 3: Image Correction and Data Joining</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p><strong>Virginia Norwood, creator of Landsat technology</strong></p>
+<ul>
+<li>MIT graduate, creator of Landsat and MultiSpectral System (MSS), pioneer of remote sensing.</li>
+</ul>
+<p><strong>Why image corrections are needed/ pre processing requirements</strong></p>
+<ul>
+<li><p>Needed when technical defects and deficiencies of the sensor and data transfer systems lead to mistakes in the image data construction.</p></li>
+<li><p>Raw remotely sensed image data are full of geometric and radiometric flaws caused by the curved shape of the Earth, the imperfectly transparent atmosphere, daily and seasonal variations in the amount of solar radiation received at the surface, and imperfections in scanning instruments, etc</p></li>
+</ul>
+<p><br>
+</p>
+<p><strong>Imagery correction types</strong></p>
+<ul>
+<li><p><strong>Geometric</strong></p>
+<ul>
+<li><p>Purpose</p>
+<ul>
+<li><p>To remove geometric distortion from a distorted image</p></li>
+<li><p>Image distortion can happen through rotation of Earth, wind from plane, uneven topography, off-nadir angle.</p></li>
+</ul></li>
+</ul></li>
+<li><p>Steps</p>
+<ul>
+<li><p>Ground Control Points (GCP) for both image and map/reference coordinates are identified</p></li>
+<li><p>Sensor model is built using GCP to give geometric transformation coefficients&nbsp;</p>
+<ul>
+<li>Transformation algorithms used to convert geometric (lat long) to geocentric (x,y) coordinates</li>
+</ul></li>
+<li><p>Coordinates are plotted to ensure line of best fit (minimal MSE) and variance for MSE (RMSE)</p></li>
+<li><p>Resampling (<strong>used to calculate pixel values when one raster grid is fitted to another)</strong> to fix shift in data from sensor modeling</p></li>
+</ul></li>
+<li><p>Two images (one correct/gold standard) overlap in order for pixels to line up</p></li>
+<li><p><strong>Atmospheric</strong></p>
+<ul>
+<li><p>Purpose</p>
+<ul>
+<li><p>To remove scattering and absorption effects of the atmosphere on the reflectance values of images taken by satellite or airborne sensors</p></li>
+<li><p>2 main sources of environmental disturbance: atmos scattering &amp; topographic attenuation (dimming and blurring effects)</p></li>
+</ul></li>
+<li><p>Atmos correction is only necessary for certain situations:</p>
+<ul>
+<li><p>Spectral signature (unique wavelength radiated by an object. Different objects have different signatures) through space and time</p></li>
+<li><p>Biophysical parameters (i.e.&nbsp;temperature, leaf area index, NDVI) are needed</p></li>
+<li><p>Scattering leads to adjacency = radiance from nearby pixels is mixed into pixel of interest</p></li>
+<li><p>Correction methods:</p>
+<ul>
+<li><p>Relative (when compared to others)</p>
+<ul>
+<li><p>Spectral band = A wavelength range in the spectrum of reflected or radiated electromagnetic (EM) energy to which a remote sensor is sensitive</p></li>
+<li><p>To normalise intensities of different bands relative to each other within a single image</p></li>
+<li><p>To normalise intensities of bands from many dates to one date</p></li>
+<li><p>Relative correction methods</p>
+<ul>
+<li><p>Dark object saturation = Effects of atmos scattering are removed by finding the darkest pixels in an image and subtracting their values from all other pixels</p></li>
+<li><p>Pseudo-invariant features = technique is based on the statistical invariance of the reflectance of man-made in-scene elements such as concrete, asphalt, and rooftops. Differences in the grey-level distributions of these invariant objects is assumed to be a linear function and is corrected statistically to perform the normalisation. The technique exhibits errors in reflectance of approximately 1% for Landsat TM and high-resolution air photo imagery in all spectral regions studied</p></li>
+</ul></li>
+</ul></li>
+<li><p>Absolute = definitive</p>
+<ul>
+<li><p>Changing of digital brightness into scaled surface reflectance (amount of light reflected by the surface of the Earth)</p></li>
+<li><p>Absolute correction is done via atmospheric radiative transfer models (many to select from)</p></li>
+<li><p>Absolute data requirements</p>
+<ul>
+<li><p>Model - can be selected from the tool</p></li>
+<li><p>Local atmospheric visibility - from places such as a weather station, etc</p></li>
+<li><p>Image altitude</p></li>
+</ul></li>
+<li><p>Absolute tools (there are free and more expensive tools</p></li>
+</ul></li>
+<li><p>Empirical line correction</p>
+<ul>
+<li><p>Alternative to radiative transfer modeling</p></li>
+<li><p>Uses field spectrometer</p>
+<ul>
+<li><p>measures albedo (expression of the ability of surfaces to reflect heat from the sun)</p></li>
+<li><p>&amp; spectral reflectance (fraction of incoming solar radiation that is reflected from Earth’s surface)</p></li>
+<li><p>How it works = takes in light, break it into its spectral components, digitise the signal as a function of wavelength, and read it out and display it through a computer.</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Orthorectification/topographic</strong></p>
+<ul>
+<li><p>Distortions are removed to allow for pixels to be viewed from straight above (at nadir)</p>
+<ul>
+<li><p>Requires sensor geometry and an elevation model (DEM = topographic representation of bare Earth surface excluding physical characteristics)</p>
+<ul>
+<li>Features within orthorectified image will be straightened (as influence of topography has been removed.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Formulae that can be used for correction</p>
+<ul>
+<li><p>Cosine correction = refers to the human perception of light incident on a surface. Light that lands on a matte surface is perceived based on the angle of incidence. Light coming from directly above is perceived more brightly than light that is perceived at low angles.</p></li>
+<li><p>C correction = advance of cosine correction</p></li>
+<li><p>Minnaert topographic correction = Used to interpret rough terrain by expressing radiance factor as function of phase angle</p></li>
+<li><p>Statistical empirical correction</p></li>
+</ul></li>
+<li><p><strong>Radiometric calibration</strong></p>
+<ul>
+<li><p>ability to convert the digital numbers recorded by satellite imaging systems into physical units. Those units are either radiance (W/m2/sr/µm) or apparent top-of-atmosphere reflectance</p></li>
+<li><p>measurement of electromagnetic radiation and atomic particle radiation</p></li>
+<li><p>important to successfully convert raw digital image data from satellite or aerial sensors to a common physical scale based on known reflectance measurements taken from objects on the ground’s surface.&nbsp; This type of correction is important for reliable quantitative measurements of the imagery.</p></li>
+<li><p>differences show up in the spectral signature associated with each pixel, and not difference in image.</p></li>
+</ul></li>
+</ul>
+<p><strong>Data joining</strong>&nbsp;</p>
+<ul>
+<li><p>What is it?</p>
+<ul>
+<li>technique that combines several images with overlapping parts (the images may be obtained at different times, different viewing angles or by different sensors) into a large-scale seamless high-resolution image</li>
+</ul></li>
+<li><p>Why it’s necessary</p>
+<ul>
+<li>Image mosaicing is often a necessary process <strong>to cover a large and full region of interest (ROI) for many remote sensing applications</strong> (e.g., geographical mapping, resource and environmental monitoring, and disaster monitoring).</li>
+</ul></li>
+<li><p>How it’s done</p>
+<ul>
+<li><p>Overlapping of different images</p></li>
+<li><p>Feathering = &nbsp;soften the hard edges of an object in your image, i.e.&nbsp;blending of hard lines</p></li>
+<li><p>Base image will usually have one or more images layered on top</p></li>
+<li><p>Image enhancement</p></li>
+</ul></li>
+<li><p>Considerations</p>
+<ul>
+<li>Data joining allows image classification, i.e.&nbsp;<strong>the task of assigning classes—defined in a land cover and land use classification system, known as the schema—to all the pixels in a remotely sensed image</strong>. The output raster from image classification can be used to create thematic maps.</li>
+</ul></li>
+</ul>
+<p><strong>Image enhancement</strong></p>
+<ul>
+<li><p>What is it = <strong>the process of making an image more interpretable for a particular application</strong> (Faust, 1989). Enhancement makes important features of raw, remotely sensed data more interpretable to the human eye.</p></li>
+<li><p>Method</p>
+<ul>
+<li><p>Contrast enhancement</p></li>
+<li><p>Spatial filtering</p></li>
+<li><p>Density slicing</p></li>
+</ul></li>
+</ul>
+<p><strong>Key concepts</strong></p>
+<ul>
+<li><p><strong>Spectral</strong> (from EM spectrum) = the intensity of light as it varies with wavelength or frequency.</p></li>
+<li><p><strong>Irradiance</strong> = Energy at all angles and directions.</p></li>
+<li><p><strong>Radiance</strong> = energy reflected from source to sensor.</p></li>
+<li><p><strong>Reflectance</strong> = ratio of the amount of light leaving a target to the amount of light striking the target. It has no units. In other words, property of material/surface being observed.</p></li>
+<li><p><strong>Surface reflectance</strong> = amount of light reflected by the surface of the Earth. It is a ratio of surface radiance to surface irradiance, and as such is unitless, with values between 0 and 1. In short, efficiency of surface in reflecting radiant energy.</p></li>
+<li><p><strong>Spectral band</strong> = a region/range/layers in the EM spectrum in a range of wavelengths.</p></li>
+<li><p><strong>Spectral signature</strong> = unique wavelength radiated by an object.</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Raw remotely sensed image data are full of geometric and radiometric flaws caused by the curved shape of the Earth, the imperfectly transparent atmosphere, daily and seasonal variations in the amount of solar radiation received at the surface, and imperfections in scanning instruments, among other things.</p></li>
+<li><p>Image correction and enhancement methods allow for clearer image interpretation, resulting in more accurate interpretations of topography and physical features, which in turn allows for accurate analysis and on-the ground responses pertaining to land monitoring, disaster response, environmental study, and resource exploration.</p></li>
+</ul>
+<p><strong>Reflection</strong></p>
+<ul>
+<li><p>Although most remotely sensed data nowadays has already been corrected and enhanced for ease of use, it is important to understand the methods and relevant situations.</p></li>
+<li><p>No method is perfect, depends on situation and information available in order to conduct correction.</p></li>
+<li><p>Additionally, not all remotely sensed data has been image corrected (depending on sensor source).</p></li>
+<li><p>Ultimate goal is to eliminate any distortions to the best of our abilities to produce an image that best reflects the at-ground status of the location pictured by removing any possible factors of interference.</p></li>
+</ul>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./week1.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./week4.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

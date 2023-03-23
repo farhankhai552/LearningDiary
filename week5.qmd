@@ -1,0 +1,41 @@
+# Week 5: Data Classification
+
+**What is data classification?**
+
+-   The process of separating and organising data into relevant groups ("classes") based on their shared characteristics. Within remotely sensed data, these traits can be in the form of topography, temperature, etc.\
+
+**How is classified data used in a practical setting?**
+
+-   Observation of urban expansion using Landsat data
+
+-   Observation of Land Use and Land Cover (LULC) and its effects on air pollution, using Sentinel-3 (Sea and Land Surface Temperature) and Sentinel-5 (Precursor Major Air Pollutants)
+
+-   Detection of urban green spaces
+
+-   Monitoring of forest density/illegal logging practices
+
+-   Mapping of forest fire spread for hazard determination
+
+**Classification methods**
+
+-   Machine learning method types/ types of decision tree algorithms
+
+-   Decision and Classification trees (CART)
+
+    -   CART is a decision tree algorithm useful for both classification and regression tasks.The algorithm starts with the whole dataset and selects the variable that best splits the data into two groups based on a certain standard/criterion, such as the Gini index. The algorithm then creates a node at the top of the tree that corresponds to this split, and the data is divided into two subsets based on the values of the selected variable. The same process is repeated for each subset, and the tree is grown until a stopping criterion is met. It is prone to overfitting, where the model becomes too complex and fits the noise in the data rather than the underlying pattern. To overcome this, techniques such as pruning, regularisation, and ensemble methods can be used to improve the performance and generalisation of the model.
+
+    -   Benefits of CART include ease of interpretability of findings, the ability to handle mixed datasets, it does not make assumptions about the underlying distribution of the data (non-parametric), and it is scalable depending on the size and dimensionality of the dataset. On the other hand, limitations include instability of the model due to the likelihood of a different tree being generated due to a slight change in data, and overfitting. 
+
+    -   A study conducted using CART titled "**Using classification and regression tree modelling to investigate response shift patterns in dentine hypersensitivity" utilises regression trees to determine patterns of people's response shift to dentine hypersensitivity, with the intention to explore the convergent validity with other design-based approaches.**
+
+-   Regression trees
+
+    -   Regression trees are a decision tree algorithm used for predicting continuous numerical values. Regression trees work by recursively partitioning the feature space into non-overlapping regions or segments, where each segment corresponds to a specific prediction value for the target variable. At each node of the tree, the algorithm selects the feature and threshold that provides the best split of the data, based on a metric such as mean squared error (MSE) or mean absolute error (MAE). The data are then split into two subsets based on the selected feature and threshold. Process is repeated until the criterion is met.
+
+    -   Benefits of regression trees include the ability to capture non-linear interactions between input variables, robustness of functionality despite missing data, and capability for outlier detection. However limitations include limited extrapolation ability (resulting in unreliable predictions when input variables are outside of data range), and poor performance when working on imbalanced datasets (such as small sample sizes and imbalanced class distributions). 
+
+    -   A study using regression trees titled "Use of Regression Tree Analysis for Predicting the Functional Outcome after Traumatic Spinal Cord Injury" utilises regression trees as a method to predict long-term functional outcomes of patients suffering from traumatic spinal cord injury (TSCI) in order to adapt medical strategies and plan an optimised rehabilitation.
+
+References
+
+-   \

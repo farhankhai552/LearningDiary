@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "learning diary",
+    "section": "",
+    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "wk1.html",
+    "href": "wk1.html",
+    "title": "learning diary",
+    "section": "",
+    "text": "Remote sensing is the process of acquiring information (mainly geographic imagery of Earth features) from a distance (also known as Earth Observation).\nThis is achieved through sensors mounted on a platform, which reflect energy (containing information) to the ground station\nPlatforms containing sensors include: planes, drones, satellites, and phones\nEnergy reflected from sensors to ground station is known as electromagnetic waves.\n\nHow does it work?\n\nEnergy reflected from energy source (sun) to sensors to ground station is known as electromagnetic radiation\n\nEMR energy does not automatically reflect to sensor, goes through changes via surface and atmosphere first\n\nMain example of remote sensing is satellites circling the earth containing sensors which reflect available energy (mainly from the sun). This is known as passive remote sensing.\nActive remote sensing is when sensors contain their own energy source for illumination. Examples include x-rays and radars.\n\nWhat are its applications?\n\n\n\n\n\n\n\nCol1\nCol2\n\n\n\n\nDynamic world (sentinel data)\nNear real-time cover dataset (10m resolution)\n\n\nLandsat\nUrban/green space coverage and accessibility\n\n\nSentinel\nPollution studies\n\n\nLandsat and sentinel\nIllegal logging\n\n\nLandsat\nForest fires\n\n\nLandsat and sentinel\nTemperature studies (e.g. urban heat island)\n\n\nLandsat, sentinel, and SAR\nFlooding/disaster response/building footprints\n\n\n\n\n\n\n\nConsiderations when dealing with remotely sensed data\n\nAtmospheric interference (scattering due to weather, etc)\nResolution type and detail\n\nMain concepts\n\nElectromagnetic radiation (EMR) = electric + magnetic fields moving as waves (found in all forms of waves)\nRadiant energy = energy carried by EMR waves\nShortwave radiation = energy from the sun\nRAYLEIGH SCATTERING = Scattering of atmospheric particles\nRESOLUTION = potential detail provided by imagery\n\nSpatial = size of raster grid\nSpectral = capacity of a sensor to document electromagnetic wavelengths/number of bands from EM spectrum (which could include colour, infrared light, and more). In other words, describes the ability of a sensor to define fine wavelength intervals\n\nThe finer the spectral resolution, the narrower the range that a sensor can document. Often earth surfaces require multispectral data for it to form a true colour image.\n\nTemporal = time a location is revisited\nRadiometric = ability to discriminate slight differences in energy\n\n\nPersonal reflection\n\nIntroduced to the concept of remote sensing (how it works, applications in a modern setting, how it can be utilised to track global phenomena).\nThere are always considerations when working with data depending on factors such as resolution type, atmospheric determinants which lead to distortion, other types of interference (all of which can be corrected to a certain extent).\nAllowed me to consider a new angle to approaching data-driven solutions regarding environmental issues, from solving urban heat temperature issues due to the placement of built features, to disaster risk management.\nHome country of Malaysia suffers from many environmental and man-made hazards.\nAs someone from Southeast Asia, a region becoming increasingly prone to climate risks, the potential to provide solutions using this kind of data may help decrease and/or eliminate the collateral damage caused by natural disasters, as well as pinpoint root causes in order to form data-backed solutions."
+  }
+]

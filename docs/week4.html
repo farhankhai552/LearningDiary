@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Remote Sensing Learning Diary - 3&nbsp; Week 4: Policy Applications</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./week5.html" rel="next">
+<link href="./week3.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Remote Sensing Learning Diary</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 3: Image Correction and Data Joining</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 5: Data Classification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#city-selected-kuala-lumpur-malaysia" id="toc-city-selected-kuala-lumpur-malaysia" class="nav-link active" data-scroll-target="#city-selected-kuala-lumpur-malaysia"><span class="toc-section-number">3.1</span>  City selected: Kuala Lumpur, Malaysia</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="city-selected-kuala-lumpur-malaysia" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="city-selected-kuala-lumpur-malaysia"><span class="header-section-number">3.1</span> City selected: Kuala Lumpur, Malaysia</h2>
+<p><strong>Malaysia’s disaster risk profile</strong></p>
+<ul>
+<li><p>Worst floods in the past 30 years have occurred from 2003 onwards. The majority of natural disasters from 1998 to 2018 were natural disasters (38/51).</p></li>
+<li><p>Malaysia had the highest percentage (67%) of the population exposed to floods among ASEAN Member States (between July 2012 and January 2019) as reported by ASEAN Coordinating Centre for Humanitarian Assistance on disaster management in March 2019.</p></li>
+<li><p>Nine percent of land area in Malaysia is flood prone and 4.8 million people live in areas at risk to flood.</p></li>
+<li><p>Monsoon and flash floods are the primary climate related natural disasters in the country.</p></li>
+<li><p>Malaysia’s flood prone area covers approximately 29 km and affects more than 4.82 million people.&nbsp;</p></li>
+<li><p>Additionally, annual damage caused by floods has cost an annual US $4.82 million.</p></li>
+<li><p>Most areas of the Asian region lack sufficient observational records to draw conclusions about trends in annual precipitation over the past century (seeWGIAR5 Chapter 2; Figure 24-2;Table SM24-2).<br>
+</p></li>
+</ul>
+<p><strong>Cornerstone of Malaysian framework creation</strong></p>
+<ul>
+<li><p>Local directives and plans</p>
+<ul>
+<li><p>Based on Directive 20 of National Disaster Management Relief (acts as a framework for policy building), Directive 20 is carried out by the National Disaster Management and Relief Committee (NDRMC)</p></li>
+<li><p>Eleventh Malaysia Plan: Chapter 6, Focus Area D: Strengthening Resilience Against Climate Change and Natural Disasters. As Malaysia develops socioeconomically, the country is focused on resilient growth to ensure its development gains are not reversed by natural disasters. Therefore, planning and preparing for natural disasters, identifying which areas and communities are at risk, and providing the right tools in case such situations occur are important strategies highlighted in the Plan with regard to preparing a comprehensive disaster risk management (DM) framework and protecting the resiliency of the country and its future.</p></li>
+</ul></li>
+<li><p>Internationally ratified agreements and frameworks</p>
+<ul>
+<li><p>COP26</p></li>
+<li><p>C40 Cities</p></li>
+<li><p>Sustainable Developments Goals</p></li>
+<li><p>Sendai framework</p></li>
+</ul></li>
+<li><p>Laws and policies</p>
+<ul>
+<li><p>Preventative measures instituted to minimise impact&nbsp;</p>
+<ul>
+<li><p>The Land Conservation Act 1960&nbsp;</p></li>
+<li><p>Environmental Quality Act 1974&nbsp;</p></li>
+<li><p>Local Government Act 1976&nbsp;</p></li>
+<li><p>Road, Drainage and Building Act 1974</p></li>
+<li><p>Occupational Safety and Health Act 1994</p></li>
+<li><p>Uniform Building Bylaws 1984&nbsp;</p></li>
+</ul></li>
+<li><p>Disaster Risk Management Laws include</p>
+<ul>
+<li><p>1951 Civil Defence Act (Revised 1979)&nbsp;</p></li>
+<li><p>1964 Emergency (Essential Powers) Act&nbsp;</p></li>
+<li><p>1979 Emergency (Essential Powers) Act&nbsp;</p></li>
+<li><p>1997 Policy and Mechanism of National&nbsp;</p></li>
+<li><p>Disaster Management and Relief NSC Directive&nbsp;</p></li>
+<li><p>1998 Prevention and Control of Infectious Diseases Act&nbsp;</p></li>
+<li><p>1998 Fire Services Act 341&nbsp;</p></li>
+<li><p>2016 Civil Defence (Amendment)</p></li>
+<li><p>2016 National Security Council Act</p></li>
+<li><p>Additional Acts</p>
+<ul>
+<li>National Security Act 2016</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Malaysian Disaster Risk Reduction and Mitigation Framework</strong></p>
+<ul>
+<li><p>National Disaster Management and Relief Committee (NDRMC):</p>
+<ul>
+<li>In charge of crafting national policies pertaining to disaster response using the No.20 directive as a guideline.</li>
+</ul></li>
+<li><p>National Disaster Management Agency (NADMA)</p>
+<ul>
+<li><p>NADMA is focal point of disaster risk reduction</p></li>
+<li><p>NADMA consolidates roles of different agencies, such as</p>
+<ul>
+<li><p>Disaster management division of NSC</p></li>
+<li><p>Post flood recovery unity of PM dept</p></li>
+<li><p>Special Malaysia Disaster Assistance and Rescue Agency (SMART)</p></li>
+<li><p>Under NADMA, strategic partners include</p></li>
+</ul></li>
+<li><p>&nbsp;NADMA is also responsible for Early Communications System, which consists of:</p>
+<ul>
+<li><p>MMD (Malaysian Meteorological Department)</p></li>
+<li><p>Department of Irrigation and Drainage</p></li>
+<li><p>Malaysian Remote Sensing Agency</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>How can remotely sensed data be applied to solve policy challenges?</strong></p>
+<ul>
+<li><p>Current policy challenge</p>
+<ul>
+<li>policies which exist are not comprehensive enough to plan ahead of disaster risk, and are too reactive in nature. Additionally, not all relevant departments are tied to disaster-related policies (Ministry of Works, Ministry of Housing, Ministry of Agriculture, etc).</li>
+</ul></li>
+<li><p>Policy goals</p>
+<ul>
+<li><p>&nbsp;A more comprehensive response to account for all stages of disaster preparedness and mitigation. This will help in preempting locations within Malaysia which may suffer from a risk of disasters in the future, allowing for the implementation of planning laws that can help address this issue before population displacement happens.&nbsp;</p></li>
+<li><p>More holistic policies will also help to align the country’s goals&nbsp; with internationally ratified agreements, many of which Malaysia is a part of. These include COP26, C40 cities, Sendai Framework, Sustainable Development Goals under the UNDP, and more.&nbsp;</p></li>
+<li><p>To expand accessibility of findings beyond disaster response to incorporate involvement of all relevant departments and ministries.</p></li>
+</ul></li>
+<li><p>How to address this using remotely sensed data</p>
+<ul>
+<li><p>SAR-based flood monitoring for accurate real-time monitoring</p>
+<ul>
+<li><p>Rapid assessment: Quick acquisition and processing of data, enabling faster response to flood events</p></li>
+<li><p>Wide-area coverage: Large-scale flood monitoring, even in remote or inaccessible areas</p></li>
+<li><p>All-weather capability: Reliable data collection, regardless of weather conditions or time of day</p></li>
+</ul></li>
+<li><p>Model for future flood-prone area prediction</p></li>
+</ul></li>
+</ul>
+<p><strong>Reflection on lessons learned (in relation to policy, city and the application of the data)</strong></p>
+<ul>
+<li><p>Policy implementation requires proper coordination between relevant stakeholders to carry out policy goals in an efficient manner, with each key player understanding which part they play. Fragmentation and unclear division of labour in terms of role responsibility may cause confusion due to overlapping roles.</p></li>
+<li><p>The democratisation of data accessibility and the development of satellite data has allowed for more creative methods of solving issues pertaining to natural disasters. This is especially important for developing countries, particularly in the global South with lack of access to technology and manpower to help assess issues and form relevant solutions.</p></li>
+<li><p>Despite the existence of internationally ratified agreements working towards forming sustainable city policies, many developing nations are at a significant disadvantage due to a lack of prior access and technology. While richer nations (typically located in the West) may already have infrastructure in place, poorer nations are still working towards building infrastructure. As a result, their preparedness and response times to disasters are delayed.</p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./week3.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 3: Image Correction and Data Joining</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./week5.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 5: Data Classification</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

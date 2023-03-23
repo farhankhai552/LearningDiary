@@ -1,0 +1,13 @@
+# Preface {.unnumbered}
+
+Welcome!
+
+My name is Farhan Khairulannuar, an MSc Urban Spatial Science student currently studying at UCL's Centre of Advanced Spatial Analysis (CASA).
+
+# Purpose {.unnumbered}
+
+This learning diary acts as an assignment for the module CASA00023 Remote Sensing Cities and Environment. Each week covers a different topic pertaining to remote sensing.
+
+This book is created from R markdown and executable code.
+
+\
