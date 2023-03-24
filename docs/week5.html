@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Remote Sensing Learning Diary - 4&nbsp; Week 5: Data Classification</title>
+<title>Remote Sensing Learning Diary - 5&nbsp; Week 5: Google Earth Engine (GEE)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./week6.html" rel="next">
 <link href="./week4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 5: Data Classification</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5: Google Earth Engine (GEE)</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -105,17 +105,37 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 3: Image Correction and Data Joining</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2: Radar sensor</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3: Image Correction and Data Joining</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 5: Data Classification</span></a>
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week5.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5: Google Earth Engine (GEE)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Data Classification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7: Data Classification (Part 2)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8: Temperature and Policy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -128,14 +148,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#part-1-what-gee-is-and-basic-components" id="toc-part-1-what-gee-is-and-basic-components" class="nav-link active" data-scroll-target="#part-1-what-gee-is-and-basic-components"><span class="toc-section-number">5.1</span>  <strong>Part 1: what GEE is and basic components</strong></a></li>
+  <li><a href="#part-2-how-to-use-gee" id="toc-part-2-how-to-use-gee" class="nav-link" data-scroll-target="#part-2-how-to-use-gee"><span class="toc-section-number">5.2</span>  <strong>Part 2: How to use GEE</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 5: Data Classification</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5: Google Earth Engine (GEE)</span></h1>
 </div>
 
 
@@ -149,42 +176,89 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>What is data classification?</strong></p>
+<section id="part-1-what-gee-is-and-basic-components" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="part-1-what-gee-is-and-basic-components"><span class="header-section-number">5.1</span> <strong>Part 1: what GEE is and basic components</strong></h2>
+<p><strong>What is it?</strong></p>
 <ul>
-<li>The process of separating and organising data into relevant groups (“classes”) based on their shared characteristics. Within remotely sensed data, these traits can be in the form of topography, temperature, etc.<br>
-</li>
+<li><p>“Geospatial” processing service that renders a 3D representation of Earth based primarily on satellite imagery.&nbsp;</p></li>
+<li><p>The program maps the Earth by superimposing satellite images, aerial photography, and GIS data onto a 3D globe, allowing users to see cities and landscapes from various angles.</p></li>
+<li><p>Permits geospatial analysis at scale (meaning; planetary scale analysis using massive datasets within seconds)<br>
+</p></li>
 </ul>
-<p><strong>How is classified data used in a practical setting?</strong></p>
+<p><strong>GEE terms</strong></p>
 <ul>
-<li><p>Observation of urban expansion using Landsat data</p></li>
-<li><p>Observation of Land Use and Land Cover (LULC) and its effects on air pollution, using Sentinel-3 (Sea and Land Surface Temperature) and Sentinel-5 (Precursor Major Air Pollutants)</p></li>
-<li><p>Detection of urban green spaces</p></li>
-<li><p>Monitoring of forest density/illegal logging practices</p></li>
-<li><p>Mapping of forest fire spread for hazard determination</p></li>
+<li><p>Image = raster (has bands)</p></li>
+<li><p>Image stack (stack of images) = ImageCollection</p></li>
+<li><p>Feature = vector (has geometry and attributes)</p></li>
+<li><p>Feature stack (lots of polygons) = FeatureCollection</p></li>
 </ul>
-<p><strong>Classification methods</strong></p>
+<p>Client vs Server side</p>
 <ul>
-<li><p>Machine learning method types/ types of decision tree algorithms</p></li>
-<li><p>Decision and Classification trees (CART)</p>
+<li><p>Client = collects user input</p></li>
+<li><p>Server = processes user input</p></li>
+<li><p>Some code runs on server side, some code runs on client side</p></li>
+</ul>
+<p>Scale</p>
 <ul>
-<li><p>CART is a decision tree algorithm useful for both classification and regression tasks.The algorithm starts with the whole dataset and selects the variable that best splits the data into two groups based on a certain standard/criterion, such as the Gini index. The algorithm then creates a node at the top of the tree that corresponds to this split, and the data is divided into two subsets based on the values of the selected variable. The same process is repeated for each subset, and the tree is grown until a stopping criterion is met. It is prone to overfitting, where the model becomes too complex and fits the noise in the data rather than the underlying pattern. To overcome this, techniques such as pruning, regularisation, and ensemble methods can be used to improve the performance and generalisation of the model.</p></li>
-<li><p>Benefits of CART include ease of interpretability of findings, the ability to handle mixed datasets, it does not make assumptions about the underlying distribution of the data (non-parametric), and it is scalable depending on the size and dimensionality of the dataset. On the other hand, limitations include instability of the model due to the likelihood of a different tree being generated due to a slight change in data, and overfitting.&nbsp;</p></li>
-<li><p>A study conducted using CART titled “<strong>Using classification and regression tree modelling to investigate response shift patterns in dentine hypersensitivity” utilises regression trees to determine patterns of people’s response shift to dentine hypersensitivity, with the intention to explore the convergent validity with other design-based approaches.</strong></p></li>
+<li><p>Refers to pixel resolution</p></li>
+<li><p>Scale is set by output, not input</p></li>
+</ul>
+<p>Projections</p>
+<ul>
+<li>GEE converts all data into EPSG: 3587 when displayed</li>
+</ul>
+<p>Loops and Mapping</p>
+<p><img src="https://andrewmaclachlan.github.io/CASA0023-lecture-5/img/GEE_object_classes.png" class="img-fluid"></p>
+</section>
+<section id="part-2-how-to-use-gee" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="part-2-how-to-use-gee"><span class="header-section-number">5.2</span> <strong>Part 2: How to use GEE</strong></h2>
+<p><strong>Components of GEE</strong></p>
+<ul>
+<li><p>Objects&nbsp;</p>
+<ul>
+<li><p>includes vector, raster, feature, string, number</p></li>
+<li><p>Each object belongs to a class</p></li>
+<li><p>Each class has a specific function within GEE (also known as methods)</p></li>
 </ul></li>
-<li><p>Regression trees</p>
-<ul>
-<li><p>Regression trees are a decision tree algorithm used for predicting continuous numerical values. Regression trees work by recursively partitioning the feature space into non-overlapping regions or segments, where each segment corresponds to a specific prediction value for the target variable. At each node of the tree, the algorithm selects the feature and threshold that provides the best split of the data, based on a metric such as mean squared error (MSE) or mean absolute error (MAE). The data are then split into two subsets based on the selected feature and threshold. Process is repeated until the criterion is met.</p></li>
-<li><p>Benefits of regression trees include the ability to capture non-linear interactions between input variables, robustness of functionality despite missing data, and capability for outlier detection. However limitations include limited extrapolation ability (resulting in unreliable predictions when input variables are outside of data range), and poor performance when working on imbalanced datasets (such as small sample sizes and imbalanced class distributions).&nbsp;</p></li>
-<li><p>A study using regression trees titled “Use of Regression Tree Analysis for Predicting the Functional Outcome after Traumatic Spinal Cord Injury” utilises regression trees as a method to predict long-term functional outcomes of patients suffering from traumatic spinal cord injury (TSCI) in order to adapt medical strategies and plan an optimised rehabilitation.</p></li>
-</ul></li>
+<li><p>Geometry = point/line/polygon with no attributes</p></li>
+<li><p>Feature = geometry with attributes</p></li>
+<li><p>Feature collection = several features with attributes</p></li>
 </ul>
-<p>References</p>
+<p><strong>GEE functions and tools</strong></p>
 <ul>
-<li><br>
-</li>
+<li><p>Loading image collections</p></li>
+<li><p>Reducing images (by region, regions, or neighbourhoods)</p>
+<ul>
+<li><p>To summarise collection of images into one image composite</p></li>
+<li><p>Reduction methods include: median, region, neighbourhood, linear regression</p>
+<ul>
+<li><p>With median = median value of each pixel is used to make image composite</p></li>
+<li><p>By region = useful for conducting statistical analysis on a single area</p></li>
+<li><p>By neighbourhood = kernel neighbourhood is used to reduce image (as opposed to region boundary). Mean/min/max value of neighbour pixels surrounding central pixel are calculated</p></li>
+<li><p>Linear regression = to determine change in pixel values over time</p></li>
+</ul></li>
+</ul></li>
+<li><p>Joins and filtering<br>
+</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Environmental monitoring: GEE has several tools for analysing and monitoring the environment, such as mapping deforestation, identifying areas at risk of drought or flooding, tracking wildlife, and monitoring the effects of climate change.</p></li>
+<li><p>LULC: can be used to map and monitor crop growth, track land use changes, and help with precision farming. By using satellite imagery and machine learning algorithms, it can provide detailed information about soil moisture, vegetation health, and other key variables.</p></li>
+<li><p>Disaster Response and Mitigation: During natural disasters, GEEcan be used to quickly generate maps and identify areas at risk. It can also be used to monitor ongoing disasters, track the spread of wildfires, and assess damage after the event. This can help first responders and relief organisations allocate resources more effectively.</p></li>
+<li><p>Urban Planning: GEE can help urban planners and policymakers make informed decisions about where to build infrastructure and how to manage resources. For example, it can be used to analyse traffic patterns, identify areas at risk of flooding, and monitor urbanisation trends.<br>
+</p></li>
+</ul>
+<p><strong>Reflection</strong></p>
+<ul>
+<li><p>GEE contains a wealth of geospatial data to be used for free. This helps democratise the process of remote sensing. The terminal is also user-friendly and allows for beginners to extract remotely sensed data with ease.</p></li>
+<li><p>Scalability capabilities of GEE are incredibly useful when dealing with large datasets</p></li>
+<li><p>Cost effectiveness of GEE and its user-friendliness helps with introducing remote sensing methods to the masses.</p></li>
+<li><p>Ultimately, the process behind interpreting remotely sensed data is the same in terms of technique, and usually only differs in name. This streamlines the process of understanding how to code better. If you understand one way to do it, it won’t be difficult for you to understand how other methods are carried out as the core aspects remain similar.</p></li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -288,12 +362,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week4.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4: Policy Applications</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week6.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Data Classification</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

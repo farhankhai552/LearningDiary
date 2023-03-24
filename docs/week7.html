@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Remote Sensing Learning Diary - 1&nbsp; Week 1: Intro to Remote Sensing</title>
+<title>Remote Sensing Learning Diary - 7&nbsp; Week 7: Data Classification (Part 2)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week2.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./week8.html" rel="next">
+<link href="./week6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7: Data Classification (Part 2)</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7: Data Classification (Part 2)</span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7: Data Classification (Part 2)</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7: Data Classification (Part 2)</span></h1>
 </div>
 
 
@@ -169,99 +169,38 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>What is remote sensing?</strong></p>
+<p><strong>Landcover classification methods (continued)</strong></p>
 <ul>
-<li><p>Remote sensing is the process of acquiring information (mainly geographic imagery of Earth features) from a distance (also known as Earth Observation).</p></li>
-<li><p>This is achieved through sensors mounted on a platform, which reflect energy (containing information) to the ground station</p></li>
-<li><p>Platforms containing sensors include: planes, drones, satellites, and phones</p></li>
-<li><p>Energy reflected from sensors to ground station is known as electromagnetic waves.</p></li>
-</ul>
-<p><strong>How does it work?</strong></p>
+<li><p>Object-based image analysis (OBIA)</p>
 <ul>
-<li><p>Energy reflected from energy source (sun) to sensors to ground station is known as electromagnetic radiation</p>
-<ul>
-<li>EMR energy does not automatically reflect to sensor, goes through changes via surface and atmosphere first</li>
+<li><p>Segments an image into homogenous spectral regions. Image segmentation is the process of grouping multiple adjacent pixels into polygon ‘Objects’ based on similar spectral characteristics.</p></li>
+<li><p>Differs from standard pixel-based image analysis, which assigns a land cover class per pixel. All pixels are the same size, same shape, and don’t have any concept of their neighbours.</p></li>
+<li><p>OBIA segments pixels together into vector objects. This allows for segmentation of land cover features in terms of spectral, spatial, and geometrical properties</p></li>
 </ul></li>
-<li><p>Main example of remote sensing is satellites circling the earth containing sensors which reflect available energy (mainly from the sun). This is known as passive remote sensing.</p></li>
-<li><p>Active remote sensing is when sensors contain their own energy source for illumination. Examples include x-rays and radars.</p></li>
-</ul>
-<p><img src="images/paste-9A4DB67A.png" class="img-fluid" width="345"></p>
-<p><strong>What are its applications?</strong></p>
-<table class="table">
-<colgroup>
-<col style="width: 40%">
-<col style="width: 59%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Source</th>
-<th>Applications</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Dynamic world (sentinel data)</td>
-<td>Near real-time cover dataset (10m resolution)</td>
-</tr>
-<tr class="even">
-<td>Landsat</td>
-<td>Urban/green space coverage and accessibility</td>
-</tr>
-<tr class="odd">
-<td>Sentinel</td>
-<td>Pollution studies</td>
-</tr>
-<tr class="even">
-<td>Landsat and sentinel</td>
-<td>Illegal logging</td>
-</tr>
-<tr class="odd">
-<td>Landsat</td>
-<td>Forest fires</td>
-</tr>
-<tr class="even">
-<td>Landsat and sentinel</td>
-<td>Temperature studies (e.g.&nbsp;urban heat island)</td>
-</tr>
-<tr class="odd">
-<td>Landsat, sentinel, and SAR</td>
-<td>Flooding/disaster response/building footprints</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Considerations when dealing with remotely sensed data</strong></p>
+<li><p>Sub pixel analysis</p>
 <ul>
-<li><p>Atmospheric interference (scattering due to weather, etc)</p></li>
-<li><p>Resolution type and detail</p></li>
-</ul>
-<p><strong>Main concepts</strong></p>
-<ul>
-<li><p>Electromagnetic radiation (EMR) = electric + magnetic fields moving as waves (found in all forms of waves)</p></li>
-<li><p>Radiant energy = energy carried by EMR waves</p></li>
-<li><p>Shortwave radiation = energy from the sun</p></li>
-<li><p>RAYLEIGH SCATTERING = Scattering of atmospheric particles</p></li>
-<li><p>RESOLUTION = potential detail provided by imagery</p>
-<ul>
-<li><p>Spatial = size of raster grid</p></li>
-<li><p>Spectral = capacity of a sensor to document electromagnetic wavelengths/number of bands from EM spectrum (which could include colour, infrared light, and more). In other words, <strong>describes the ability of a sensor to define fine wavelength intervals</strong></p>
-<ul>
-<li>The finer the spectral resolution, the narrower the range that a sensor can document. Often earth surfaces require multispectral data for it to form a true colour image.</li>
-</ul></li>
-<li><p>Temporal = time a location is revisited</p></li>
-<li><p>Radiometric = ability to discriminate slight differences in energy</p></li>
+<li><p>Also known as &nbsp;Sub pixel classification, Spectral Mixture Analysis (SMA), Linear spectral unmixing.</p></li>
+<li><p>SMA: determines the **proportion** or **abundance** of landcover per pixel</p></li>
 </ul></li>
 </ul>
-<p><strong>Personal reflection</strong></p>
+<p><strong>Accuracy Assessment</strong></p>
 <ul>
-<li><p>Introduced to the concept of remote sensing (how it works, applications in a modern setting, how it can be utilised to track global phenomena).</p></li>
-<li><p>There are always considerations when working with data depending on factors such as resolution type, atmospheric determinants which lead to distortion, other types of interference (all of which can be corrected to a certain extent).</p></li>
-<li><p>Allowed me to consider a new angle to approaching data-driven solutions regarding environmental issues, from solving urban heat temperature issues due to the placement of built features, to disaster risk management.</p></li>
-<li><p>Home country of Malaysia suffers from many environmental and man-made hazards.</p></li>
-<li><p>As someone from Southeast Asia, a region becoming increasingly prone to climate risks, the potential to provide solutions using this kind of data may help decrease and/or eliminate the collateral damage caused by natural disasters, as well as pinpoint root causes in order to form data-backed solutions.</p></li>
+<li><p>Binary confusion matrix = a two by two table formed by counting of the number of the four outcomes of a binary classifier</p>
+<p><img src="images/paste-4D8CE28C.png" class="img-fluid" width="299"></p></li>
+<li><p>Kappa coefficient&nbsp; = Statistical measure of inter-rater reliability for categorical variables. Kappa is used when two raters both apply a criterion based on a tool to assess whether or not some condition occurs.</p></li>
+<li><p>F1 score = the harmonic mean of precision and recall. It takes both false positive and false negatives into account. Therefore, it performs well on an imbalanced dataset</p></li>
+<li><p>Receiver Operating Characteristic Curve = &nbsp;a plot of test sensitivity as the y coordinate versus its 1-specificity or false positive rate (FPR) as the x coordinate.</p></li>
+</ul>
+<p><strong>Application</strong></p>
+<ul>
+<li><p>A continuation of last week, these classification methods provide a technique for analyzing high-spatial resolution imagery by using spectral, spatial, textural and topological characteristics.</p></li>
+<li><p>However, it is important to note that accuracy cannot be fully perfect, therefore accuracy assessments can be carried out to improve the accuracy rating of the classification</p></li>
+<li></li>
+</ul>
+<p><strong>Reflection</strong></p>
+<ul>
+<li><p>I will admit that this week has been the most difficult for me to understand. As such, I found it difficult to make meaningful notes that I could truly learn from.</p></li>
+<li><p>I do however understand the need to not only properly classify data, but to ensure accuracy is at its best in order to help ensure clearest interpretation of topographic image is acquired.</p></li>
 </ul>
 
 
@@ -367,13 +306,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./week6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Data Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2: Radar sensor</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week8.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8: Temperature and Policy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

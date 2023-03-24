@@ -1,0 +1,109 @@
+# Week 6: Data Classification
+
+**What is data classification?**
+
+-   The process of separating and organising data into relevant groups ("classes") based on their shared characteristics. Within remotely sensed data, these traits can be in the form of topography, temperature, etc
+
+**What is land use and land cover and why is its classification useful?**
+
+-   Land cover indicates the visible surface of land (e.g. crops, grass, water, broad-leaved forest or built-up area). Land use indicates the socioeconomic purpose for which the land is used (e.g. agriculture, forestry, recreation or residential use)
+
+-   Classification of LULC is the process of assigning each pixel or area of the land surface into different categories or classes based on the features extracted from satellite images or other geospatial data sources
+
+-   Land use classification provides a basis for the sustainable development of land resources in both urban and rural contexts and to inform the development of policies across all areas of human activity at national, regional and local levels, including planning and regeneration, housing, employment, transport, agriculture, environment and recreation.
+
+    ![Land Use Land Cover Modeling \| U.S. Geological Survey](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/info_block/public/thumbnails/image/projected_lulc_a1b.jpg?itok=KW0TeHxs){alt="Land Use Land Cover Modeling | U.S. Geological Survey" width="406"}
+
+-   Countries like the United Kingdom have created a consistent classification system to allow for standardisation of collection and interpretation of LULC data. This will allow for different sectors to link their findings and collaborate based on data analysis.
+
+**Expert systems and machine learning**
+
+-   Expert system: an Artificial Intelligence software which extracts information from databases of expert knowledge in order to simulate judgement similar to that of a human's
+
+-   Machine learning: A system makes solutions based on knowledge made available to the system (inductive learning). When new information is fed to the machine, judgments are refined, using a 'supervised learning algorithm'.
+
+**Machine learning method types/ types of decision tree algorithms**
+
+-   CART
+
+    -   a decision tree algorithm useful for both classification and regression tasks. 
+
+    -   For classification tasks, the goal of the CART algorithm is to maximise the purity of the subsets at each node, where purity is measured by a metric such as the Gini index or entropy. For regression tasks, the goal is to minimise the mean squared error (MSE) of the subsets at each node.
+
+    -   it is prone to overfitting, where the model becomes too complex and fits the noise in the data rather than the underlying pattern. To overcome this, techniques such as pruning, regularisation, and ensemble methods can be used to improve the performance and generalisation of the model.
+
+    -   Useful for handling both categorical and continuous target variables.
+
+-   Regression trees
+
+    -   Decision tree algorithm that is used for predicting continuous numerical values. Regression trees work by recursively partitioning the feature space into non-overlapping regions or segments, where each segment corresponds to a specific prediction value for the target variable.
+
+    -   At each node of the tree, the algorithm selects the feature and threshold that provides the best split of the data, based on a metric such as mean squared error (MSE) or mean absolute error (MAE). The data are then split into two subsets based on the selected feature and threshold. Process is repeated until criterion is met
+
+    -   These are useful in a variety of applications where the target variable is continuous and has a nonlinear relationship with the features.
+
+    -   Specialised for predicting continuous values
+
+-   Random forest
+
+    -   A method that combines multiple decision trees to improve performance and reduce overfitting.
+
+    -   It can carry out both regression and classification tasks. 
+
+-   Supervised and unsupervised learning
+
+    -   Supervised learning: algorithm is trained on labeled data. Objective of the algorithm is to learn a mapping between the input features and the output targets, so that it can predict the output labels for new, unseen input data. Unsupervised learning is used for tasks such as classification, regression, and object detection.
+
+    -   Unsupervised learning: algorithm is trained on unlabeled data, where only the input features are provided, without any corresponding output labels or targets. The objective of the algorithm is to find patterns, relationships, and structure in the data. Unsupervised learning is used for tasks such as clustering, dimensionality reduction, and anomaly detection
+
+    -   Key differences between learning types:
+
+        -   Input data
+
+        -   Objective
+
+        -   Types of problems addressed
+
+-   Maximum likelihood
+
+    -   statistical method for estimating population parameters (such as the mean and variance) from sample data, by finding the parameter values that maximise the likelihood of making the observations given the parameter.
+
+    -   In simpler terms, it is the method of estimating the parameters of an assumed probability distribution, given some observed data.
+
+    -   Provides a consistent approach to parameter estimation problems.
+
+-   Support Vector Machine (SVM)
+
+    -   A machine learning algorithm that uses supervised learning models to solve complex classification, regression, and outlier detection problems by performing optimal data transformations that determine boundaries between data points based on predefined classes, labels, or outputs.
+
+    -   Purpose of SVM is to find a hyperplane in an N-dimensional space(N --- the number of features) that distinctly classifies the data points.
+
+    -   In simpler terms, it conducts data transformation, and then separates data based on labels and outputs defined. \
+
+**Applications**
+
+-   Machine learning solutions mainly focus on solving regression and classification-related issues.
+
+-   Within the context of spatial analysis, this is useful to classify different LULC types, in order to better identify physical features for more accurate responses such as for natural disaster response, urban planning, green space planning, urban development, weather forecasting, and so on.
+
+-   How is classified data used in a practical setting?
+
+    -   Observation of urban expansion using Landsat data
+
+    -   Observation of Land Use and Land Cover (LULC) and its effects on air pollution, using Sentinel-3 (Sea and Land Surface Temperature) and Sentinel-5 (Precursor Major Air Pollutants)
+
+    -   Detection of urban green spaces
+
+    -   Monitoring of forest density/illegal logging practices
+
+    -   Mapping of forest fire spread for hazard determination\
+
+**Reflections**
+
+-   Availability of modern data-driven methods allows for better LULC utilisation, particularly through data classification.
+
+-   A variety of data classification methods exist to address specific issues with categorising remotely sensed data
+
+-   More accurate classification means better responses which reflect actual LULC conditions.
+
+-   Accurate classification also opens up the opportunity of incorporating machine learning into mainstream urban development issues, due to findings accuracy being useful for interpretation.

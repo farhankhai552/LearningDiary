@@ -22,6 +22,8 @@
 
         -   Image distortion can happen through rotation of Earth, wind from plane, uneven topography, off-nadir angle.
 
+        ![](images/paste-3B2DCE3A.png){width="330"}
+
 -   Steps
 
     -   Ground Control Points (GCP) for both image and map/reference coordinates are identified

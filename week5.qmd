@@ -1,41 +1,101 @@
-# Week 5: Data Classification
+# Week 5: Google Earth Engine (GEE)
 
-**What is data classification?**
+## **Part 1: what GEE is and basic components**
 
--   The process of separating and organising data into relevant groups ("classes") based on their shared characteristics. Within remotely sensed data, these traits can be in the form of topography, temperature, etc.\
+**What is it?**
 
-**How is classified data used in a practical setting?**
+-   "Geospatial" processing service that renders a 3D representation of Earth based primarily on satellite imagery. 
 
--   Observation of urban expansion using Landsat data
+-   The program maps the Earth by superimposing satellite images, aerial photography, and GIS data onto a 3D globe, allowing users to see cities and landscapes from various angles.
 
--   Observation of Land Use and Land Cover (LULC) and its effects on air pollution, using Sentinel-3 (Sea and Land Surface Temperature) and Sentinel-5 (Precursor Major Air Pollutants)
+-   Permits geospatial analysis at scale (meaning; planetary scale analysis using massive datasets within seconds)\
 
--   Detection of urban green spaces
+**GEE terms**
 
--   Monitoring of forest density/illegal logging practices
+-   Image = raster (has bands)
 
--   Mapping of forest fire spread for hazard determination
+-   Image stack (stack of images) = ImageCollection
 
-**Classification methods**
+-   Feature = vector (has geometry and attributes)
 
--   Machine learning method types/ types of decision tree algorithms
+-   Feature stack (lots of polygons) = FeatureCollection
 
--   Decision and Classification trees (CART)
+Client vs Server side
 
-    -   CART is a decision tree algorithm useful for both classification and regression tasks.The algorithm starts with the whole dataset and selects the variable that best splits the data into two groups based on a certain standard/criterion, such as the Gini index. The algorithm then creates a node at the top of the tree that corresponds to this split, and the data is divided into two subsets based on the values of the selected variable. The same process is repeated for each subset, and the tree is grown until a stopping criterion is met. It is prone to overfitting, where the model becomes too complex and fits the noise in the data rather than the underlying pattern. To overcome this, techniques such as pruning, regularisation, and ensemble methods can be used to improve the performance and generalisation of the model.
+-   Client = collects user input
 
-    -   Benefits of CART include ease of interpretability of findings, the ability to handle mixed datasets, it does not make assumptions about the underlying distribution of the data (non-parametric), and it is scalable depending on the size and dimensionality of the dataset. On the other hand, limitations include instability of the model due to the likelihood of a different tree being generated due to a slight change in data, and overfitting. 
+-   Server = processes user input
 
-    -   A study conducted using CART titled "**Using classification and regression tree modelling to investigate response shift patterns in dentine hypersensitivity" utilises regression trees to determine patterns of people's response shift to dentine hypersensitivity, with the intention to explore the convergent validity with other design-based approaches.**
+-   Some code runs on server side, some code runs on client side
 
--   Regression trees
+Scale
 
-    -   Regression trees are a decision tree algorithm used for predicting continuous numerical values. Regression trees work by recursively partitioning the feature space into non-overlapping regions or segments, where each segment corresponds to a specific prediction value for the target variable. At each node of the tree, the algorithm selects the feature and threshold that provides the best split of the data, based on a metric such as mean squared error (MSE) or mean absolute error (MAE). The data are then split into two subsets based on the selected feature and threshold. Process is repeated until the criterion is met.
+-   Refers to pixel resolution
 
-    -   Benefits of regression trees include the ability to capture non-linear interactions between input variables, robustness of functionality despite missing data, and capability for outlier detection. However limitations include limited extrapolation ability (resulting in unreliable predictions when input variables are outside of data range), and poor performance when working on imbalanced datasets (such as small sample sizes and imbalanced class distributions). 
+-   Scale is set by output, not input
 
-    -   A study using regression trees titled "Use of Regression Tree Analysis for Predicting the Functional Outcome after Traumatic Spinal Cord Injury" utilises regression trees as a method to predict long-term functional outcomes of patients suffering from traumatic spinal cord injury (TSCI) in order to adapt medical strategies and plan an optimised rehabilitation.
+Projections
 
-References
+-   GEE converts all data into EPSG: 3587 when displayed
 
--   \
+Loops and Mapping
+
+![](https://andrewmaclachlan.github.io/CASA0023-lecture-5/img/GEE_object_classes.png)
+
+## **Part 2: How to use GEE**
+
+**Components of GEE**
+
+-   Objects 
+
+    -   includes vector, raster, feature, string, number
+
+    -   Each object belongs to a class
+
+    -   Each class has a specific function within GEE (also known as methods)
+
+-   Geometry = point/line/polygon with no attributes
+
+-   Feature = geometry with attributes
+
+-   Feature collection = several features with attributes
+
+**GEE functions and tools**
+
+-   Loading image collections
+
+-   Reducing images (by region, regions, or neighbourhoods)
+
+    -   To summarise collection of images into one image composite
+
+    -   Reduction methods include: median, region, neighbourhood, linear regression
+
+        -   With median = median value of each pixel is used to make image composite
+
+        -   By region = useful for conducting statistical analysis on a single area
+
+        -   By neighbourhood = kernel neighbourhood is used to reduce image (as opposed to region boundary). Mean/min/max value of neighbour pixels surrounding central pixel are calculated
+
+        -   Linear regression = to determine change in pixel values over time
+
+-   Joins and filtering\
+
+**Applications**
+
+-   Environmental monitoring: GEE has several tools for analysing and monitoring the environment, such as mapping deforestation, identifying areas at risk of drought or flooding, tracking wildlife, and monitoring the effects of climate change.
+
+-   LULC: can be used to map and monitor crop growth, track land use changes, and help with precision farming. By using satellite imagery and machine learning algorithms, it can provide detailed information about soil moisture, vegetation health, and other key variables.
+
+-   Disaster Response and Mitigation: During natural disasters, GEEcan be used to quickly generate maps and identify areas at risk. It can also be used to monitor ongoing disasters, track the spread of wildfires, and assess damage after the event. This can help first responders and relief organisations allocate resources more effectively.
+
+-   Urban Planning: GEE can help urban planners and policymakers make informed decisions about where to build infrastructure and how to manage resources. For example, it can be used to analyse traffic patterns, identify areas at risk of flooding, and monitor urbanisation trends.\
+
+**Reflection**
+
+-   GEE contains a wealth of geospatial data to be used for free. This helps democratise the process of remote sensing. The terminal is also user-friendly and allows for beginners to extract remotely sensed data with ease.
+
+-   Scalability capabilities of GEE are incredibly useful when dealing with large datasets
+
+-   Cost effectiveness of GEE and its user-friendliness helps with introducing remote sensing methods to the masses.
+
+-   Ultimately, the process behind interpreting remotely sensed data is the same in terms of technique, and usually only differs in name. This streamlines the process of understanding how to code better. If you understand one way to do it, it won't be difficult for you to understand how other methods are carried out as the core aspects remain similar.

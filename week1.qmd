@@ -20,10 +20,12 @@
 
 -   Active remote sensing is when sensors contain their own energy source for illumination. Examples include x-rays and radars.
 
+![](images/paste-9A4DB67A.png){width="345"}
+
 **What are its applications?**
 
 | Source                        | Applications                                   |
-|-------------------------------|------------------------------------------------|
+|-----------------------------|-------------------------------------------|
 | Dynamic world (sentinel data) | Near real-time cover dataset (10m resolution)  |
 | Landsat                       | Urban/green space coverage and accessibility   |
 | Sentinel                      | Pollution studies                              |

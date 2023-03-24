@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Remote Sensing Learning Diary - 1&nbsp; Week 1: Intro to Remote Sensing</title>
+<title>Remote Sensing Learning Diary - 6&nbsp; Week 6: Data Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week2.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./week7.html" rel="next">
+<link href="./week5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Data Classification</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Data Classification</span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Data Classification</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Intro to Remote Sensing</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Data Classification</span></h1>
 </div>
 
 
@@ -169,99 +169,94 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>What is remote sensing?</strong></p>
+<p><strong>What is data classification?</strong></p>
 <ul>
-<li><p>Remote sensing is the process of acquiring information (mainly geographic imagery of Earth features) from a distance (also known as Earth Observation).</p></li>
-<li><p>This is achieved through sensors mounted on a platform, which reflect energy (containing information) to the ground station</p></li>
-<li><p>Platforms containing sensors include: planes, drones, satellites, and phones</p></li>
-<li><p>Energy reflected from sensors to ground station is known as electromagnetic waves.</p></li>
+<li>The process of separating and organising data into relevant groups (“classes”) based on their shared characteristics. Within remotely sensed data, these traits can be in the form of topography, temperature, etc</li>
 </ul>
-<p><strong>How does it work?</strong></p>
+<p><strong>What is land use and land cover and why is its classification useful?</strong></p>
 <ul>
-<li><p>Energy reflected from energy source (sun) to sensors to ground station is known as electromagnetic radiation</p>
+<li><p>Land cover indicates the visible surface of land (e.g.&nbsp;crops, grass, water, broad-leaved forest or built-up area). Land use indicates the socioeconomic purpose for which the land is used (e.g.&nbsp;agriculture, forestry, recreation or residential use)</p></li>
+<li><p>Classification of LULC is the process of assigning each pixel or area of the land surface into different categories or classes based on the features extracted from satellite images or other geospatial data sources</p></li>
+<li><p>Land use classification provides a basis for the sustainable development of land resources in both urban and rural contexts and to inform the development of policies across all areas of human activity at national, regional and local levels, including planning and regeneration, housing, employment, transport, agriculture, environment and recreation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/info_block/public/thumbnails/image/projected_lulc_a1b.jpg?itok=KW0TeHxs" class="img-fluid figure-img" alt="Land Use Land Cover Modeling | U.S. Geological Survey" width="406"></p>
+<p></p><figcaption class="figure-caption">Land Use Land Cover Modeling | U.S. Geological Survey</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Countries like the United Kingdom have created a consistent classification system to allow for standardisation of collection and interpretation of LULC data. This will allow for different sectors to link their findings and collaborate based on data analysis.</p></li>
+</ul>
+<p><strong>Expert systems and machine learning</strong></p>
 <ul>
-<li>EMR energy does not automatically reflect to sensor, goes through changes via surface and atmosphere first</li>
+<li><p>Expert system: an Artificial Intelligence software which extracts information from databases of expert knowledge in order to simulate judgement similar to that of a human’s</p></li>
+<li><p>Machine learning: A system makes solutions based on knowledge made available to the system (inductive learning). When new information is fed to the machine, judgments are refined, using a ‘supervised learning algorithm’.</p></li>
+</ul>
+<p><strong>Machine learning method types/ types of decision tree algorithms</strong></p>
+<ul>
+<li><p>CART</p>
+<ul>
+<li><p>a decision tree algorithm useful for both classification and regression tasks.&nbsp;</p></li>
+<li><p>For classification tasks, the goal of the CART algorithm is to maximise the purity of the subsets at each node, where purity is measured by a metric such as the Gini index or entropy. For regression tasks, the goal is to minimise the mean squared error (MSE) of the subsets at each node.</p></li>
+<li><p>it is prone to overfitting, where the model becomes too complex and fits the noise in the data rather than the underlying pattern. To overcome this, techniques such as pruning, regularisation, and ensemble methods can be used to improve the performance and generalisation of the model.</p></li>
+<li><p>Useful for handling both categorical and continuous target variables.</p></li>
 </ul></li>
-<li><p>Main example of remote sensing is satellites circling the earth containing sensors which reflect available energy (mainly from the sun). This is known as passive remote sensing.</p></li>
-<li><p>Active remote sensing is when sensors contain their own energy source for illumination. Examples include x-rays and radars.</p></li>
-</ul>
-<p><img src="images/paste-9A4DB67A.png" class="img-fluid" width="345"></p>
-<p><strong>What are its applications?</strong></p>
-<table class="table">
-<colgroup>
-<col style="width: 40%">
-<col style="width: 59%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Source</th>
-<th>Applications</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Dynamic world (sentinel data)</td>
-<td>Near real-time cover dataset (10m resolution)</td>
-</tr>
-<tr class="even">
-<td>Landsat</td>
-<td>Urban/green space coverage and accessibility</td>
-</tr>
-<tr class="odd">
-<td>Sentinel</td>
-<td>Pollution studies</td>
-</tr>
-<tr class="even">
-<td>Landsat and sentinel</td>
-<td>Illegal logging</td>
-</tr>
-<tr class="odd">
-<td>Landsat</td>
-<td>Forest fires</td>
-</tr>
-<tr class="even">
-<td>Landsat and sentinel</td>
-<td>Temperature studies (e.g.&nbsp;urban heat island)</td>
-</tr>
-<tr class="odd">
-<td>Landsat, sentinel, and SAR</td>
-<td>Flooding/disaster response/building footprints</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Considerations when dealing with remotely sensed data</strong></p>
+<li><p>Regression trees</p>
 <ul>
-<li><p>Atmospheric interference (scattering due to weather, etc)</p></li>
-<li><p>Resolution type and detail</p></li>
-</ul>
-<p><strong>Main concepts</strong></p>
-<ul>
-<li><p>Electromagnetic radiation (EMR) = electric + magnetic fields moving as waves (found in all forms of waves)</p></li>
-<li><p>Radiant energy = energy carried by EMR waves</p></li>
-<li><p>Shortwave radiation = energy from the sun</p></li>
-<li><p>RAYLEIGH SCATTERING = Scattering of atmospheric particles</p></li>
-<li><p>RESOLUTION = potential detail provided by imagery</p>
-<ul>
-<li><p>Spatial = size of raster grid</p></li>
-<li><p>Spectral = capacity of a sensor to document electromagnetic wavelengths/number of bands from EM spectrum (which could include colour, infrared light, and more). In other words, <strong>describes the ability of a sensor to define fine wavelength intervals</strong></p>
-<ul>
-<li>The finer the spectral resolution, the narrower the range that a sensor can document. Often earth surfaces require multispectral data for it to form a true colour image.</li>
+<li><p>Decision tree algorithm that is used for predicting continuous numerical values. Regression trees work by recursively partitioning the feature space into non-overlapping regions or segments, where each segment corresponds to a specific prediction value for the target variable.</p></li>
+<li><p>At each node of the tree, the algorithm selects the feature and threshold that provides the best split of the data, based on a metric such as mean squared error (MSE) or mean absolute error (MAE). The data are then split into two subsets based on the selected feature and threshold. Process is repeated until criterion is met</p></li>
+<li><p>These are useful in a variety of applications where the target variable is continuous and has a nonlinear relationship with the features.</p></li>
+<li><p>Specialised for predicting continuous values</p></li>
 </ul></li>
-<li><p>Temporal = time a location is revisited</p></li>
-<li><p>Radiometric = ability to discriminate slight differences in energy</p></li>
+<li><p>Random forest</p>
+<ul>
+<li><p>A method that combines multiple decision trees to improve performance and reduce overfitting.</p></li>
+<li><p>It can carry out both regression and classification tasks.&nbsp;</p></li>
+</ul></li>
+<li><p>Supervised and unsupervised learning</p>
+<ul>
+<li><p>Supervised learning: algorithm is trained on labeled data. Objective of the algorithm is to learn a mapping between the input features and the output targets, so that it can predict the output labels for new, unseen input data. Unsupervised learning is used for tasks such as classification, regression, and object detection.</p></li>
+<li><p>Unsupervised learning: algorithm is trained on unlabeled data, where only the input features are provided, without any corresponding output labels or targets. The objective of the algorithm is to find patterns, relationships, and structure in the data. Unsupervised learning is used for tasks such as clustering, dimensionality reduction, and anomaly detection</p></li>
+<li><p>Key differences between learning types:</p>
+<ul>
+<li><p>Input data</p></li>
+<li><p>Objective</p></li>
+<li><p>Types of problems addressed</p></li>
+</ul></li>
+</ul></li>
+<li><p>Maximum likelihood</p>
+<ul>
+<li><p>statistical method for estimating population parameters (such as the mean and variance) from sample data, by finding the parameter values that maximise the likelihood of making the observations given the parameter.</p></li>
+<li><p>In simpler terms, it is the method of estimating the parameters of an assumed probability distribution, given some observed data.</p></li>
+<li><p>Provides a consistent approach to parameter estimation problems.</p></li>
+</ul></li>
+<li><p>Support Vector Machine (SVM)</p>
+<ul>
+<li><p>A machine learning algorithm that uses supervised learning models to solve complex classification, regression, and outlier detection problems by performing optimal data transformations that determine boundaries between data points based on predefined classes, labels, or outputs.</p></li>
+<li><p>Purpose of SVM is to find a hyperplane in an N-dimensional space(N — the number of features) that distinctly classifies the data points.</p></li>
+<li><p>In simpler terms, it conducts data transformation, and then separates data based on labels and outputs defined.&nbsp;<br>
+</p></li>
 </ul></li>
 </ul>
-<p><strong>Personal reflection</strong></p>
+<p><strong>Applications</strong></p>
 <ul>
-<li><p>Introduced to the concept of remote sensing (how it works, applications in a modern setting, how it can be utilised to track global phenomena).</p></li>
-<li><p>There are always considerations when working with data depending on factors such as resolution type, atmospheric determinants which lead to distortion, other types of interference (all of which can be corrected to a certain extent).</p></li>
-<li><p>Allowed me to consider a new angle to approaching data-driven solutions regarding environmental issues, from solving urban heat temperature issues due to the placement of built features, to disaster risk management.</p></li>
-<li><p>Home country of Malaysia suffers from many environmental and man-made hazards.</p></li>
-<li><p>As someone from Southeast Asia, a region becoming increasingly prone to climate risks, the potential to provide solutions using this kind of data may help decrease and/or eliminate the collateral damage caused by natural disasters, as well as pinpoint root causes in order to form data-backed solutions.</p></li>
+<li><p>Machine learning solutions mainly focus on solving regression and classification-related issues.</p></li>
+<li><p>Within the context of spatial analysis, this is useful to classify different LULC types, in order to better identify physical features for more accurate responses such as for natural disaster response, urban planning, green space planning, urban development, weather forecasting, and so on.</p></li>
+<li><p>How is classified data used in a practical setting?</p>
+<ul>
+<li><p>Observation of urban expansion using Landsat data</p></li>
+<li><p>Observation of Land Use and Land Cover (LULC) and its effects on air pollution, using Sentinel-3 (Sea and Land Surface Temperature) and Sentinel-5 (Precursor Major Air Pollutants)</p></li>
+<li><p>Detection of urban green spaces</p></li>
+<li><p>Monitoring of forest density/illegal logging practices</p></li>
+<li><p>Mapping of forest fire spread for hazard determination<br>
+</p></li>
+</ul></li>
+</ul>
+<p><strong>Reflections</strong></p>
+<ul>
+<li><p>Availability of modern data-driven methods allows for better LULC utilisation, particularly through data classification.</p></li>
+<li><p>A variety of data classification methods exist to address specific issues with categorising remotely sensed data</p></li>
+<li><p>More accurate classification means better responses which reflect actual LULC conditions.</p></li>
+<li><p>Accurate classification also opens up the opportunity of incorporating machine learning into mainstream urban development issues, due to findings accuracy being useful for interpretation.</p></li>
 </ul>
 
 
@@ -367,13 +362,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./week5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5: Google Earth Engine (GEE)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2: Radar sensor</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week7.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7: Data Classification (Part 2)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

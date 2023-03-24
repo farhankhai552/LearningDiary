@@ -1,0 +1,43 @@
+# Week 7: Data Classification (Part 2)
+
+**Landcover classification methods (continued)**
+
+-   Object-based image analysis (OBIA)
+
+    -   Segments an image into homogenous spectral regions. Image segmentation is the process of grouping multiple adjacent pixels into polygon 'Objects' based on similar spectral characteristics.
+
+    -   Differs from standard pixel-based image analysis, which assigns a land cover class per pixel. All pixels are the same size, same shape, and don't have any concept of their neighbours.
+
+    -   OBIA segments pixels together into vector objects. This allows for segmentation of land cover features in terms of spectral, spatial, and geometrical properties
+
+-   Sub pixel analysis
+
+    -   Also known as  Sub pixel classification, Spectral Mixture Analysis (SMA), Linear spectral unmixing.
+
+    -   SMA: determines the \*\*proportion\*\* or \*\*abundance\*\* of landcover per pixel
+
+**Accuracy Assessment**
+
+-   Binary confusion matrix = a two by two table formed by counting of the number of the four outcomes of a binary classifier
+
+    ![](images/paste-4D8CE28C.png){width="299"}
+
+-   Kappa coefficient  = Statistical measure of inter-rater reliability for categorical variables. Kappa is used when two raters both apply a criterion based on a tool to assess whether or not some condition occurs.
+
+-   F1 score = the harmonic mean of precision and recall. It takes both false positive and false negatives into account. Therefore, it performs well on an imbalanced dataset
+
+-   Receiver Operating Characteristic Curve =  a plot of test sensitivity as the y coordinate versus its 1-specificity or false positive rate (FPR) as the x coordinate.
+
+**Application**
+
+-   A continuation of last week, these classification methods provide a technique for analyzing high-spatial resolution imagery by using spectral, spatial, textural and topological characteristics.
+
+-   However, it is important to note that accuracy cannot be fully perfect, therefore accuracy assessments can be carried out to improve the accuracy rating of the classification
+
+-   
+
+**Reflection**
+
+-   I will admit that this week has been the most difficult for me to understand. As such, I found it difficult to make meaningful notes that I could truly learn from.
+
+-   I do however understand the need to not only properly classify data, but to ensure accuracy is at its best in order to help ensure clearest interpretation of topographic image is acquired.

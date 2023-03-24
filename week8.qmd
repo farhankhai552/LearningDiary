@@ -1,0 +1,71 @@
+# Week 8: Temperature and Policy
+
+**What is the Urban Heat Island (UHI) effect?**
+
+-   The retention of heat by urban cores due to physical and material properties/features such as lack of trees and vegetation, dark roads and asphalt, waste heat from factories, and vehicles, and buildings.
+
+    ![How Landscape Architecture Mitigates the Urban Heat Island Effect - Land8](https://land8.com/wp-content/uploads/2018/09/Alexandre-Affonso.jpg){alt="How Landscape Architecture Mitigates the Urban Heat Island Effect - Land8" width="372"}
+
+**Urban heat island effects**
+
+-   Climate: increased rainfall, precipitation rates.
+
+-   Societal health: heat cramps, heat waves, and heat strokes. Increase in pollutants such as volatile organic compounds and carbon monoxide are also harmful to human health.
+
+-   Energy usage: increase in energy costs in urban areas that face high temperatures via air-conditioning and refrigeration usage.
+
+**Global Policies**
+
+-   New Urban Agenda
+
+    -   Principles and standards for planning, construction, development, and management.
+
+    -   Focuses on renewable and affordable energy, as well as sustainable transport infrastructure.
+
+    -   Highlights the necessity to focus on transport and energy for all, particularly the underprivileged.
+
+    -   Promotion of safe, accessible, and green public spaces (such as streets, sidewalks, squares, parks, etc).
+
+-   Sustainable Development Goals (SDGs)
+
+    -   Focus on need to create resilient and sustainable cities for humans.
+
+    -   The support of urban planning that is integrated into development plans.
+
+    -   COP26: Beat the Heat Handbook.
+
+**Local Policies**
+
+-   Barcelona: Superblocks model
+
+    -   Urban and transport planning strategy aimed at reducing motorised transport usage within cities and reclaim public spaces for humans.
+
+-   Colombia: Medellin green Corridors
+
+    -   green areas with thick vegetation are introduced along parts of the city.
+
+-   Australia: Turn Down the Heat Strategy and Action Plan (2018)
+
+-   **City policies focusing on temperature reduction**
+
+-   Singapore planning requirements
+
+-   Fremantle\'s Urban Forest Plan\
+
+**Application**
+
+-   Climate-specific policy is needed in an era of unprecedented globalisation and industrialisation, which birth city-specific problems.
+
+-   Within the context of this week\'s topic, policy to address UHI issues have manifested themselves in creative ways, from structured planning guidelines in Singapore to unique urban development plans such as in Colombia and Barcelona.
+
+-   Applications for temperature (and other climate-related) policies include: sustainable living via green spaces for humans, planning requirements that are not environmentally detrimental and that prioritise human accessibility, health preservation of humans, particularly those most prone to heat effects, development of sustainable transport options.
+
+**Reflection**
+
+-   International guidelines act as a blueprint for cities to hone in on specific development plans in line with sustainable living.
+
+-   It is important to note that solutions cannot be copypasted for each city. This is because each city faces highly specific, cultural and location-based challenges. Therefore, frameworks for sustainable living within cities must be tailor-made.
+
+-   Policies addressing current climate issues must be formed and reiterated upon to reflect modern sensibilities and solutions. As such, a dynamic and flexible framework is needed by any and all metropolitan areas.
+
+-   Many countries are lacking in in-depth policy solutions which incorporate data-driven methods for more effective policy implementation.
