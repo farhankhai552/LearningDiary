@@ -107,3 +107,7 @@
 -   More accurate classification means better responses which reflect actual LULC conditions.
 
 -   Accurate classification also opens up the opportunity of incorporating machine learning into mainstream urban development issues, due to findings accuracy being useful for interpretation.
+
+**References**
+
+https://www.usgs.gov/special-topics/land-use-land-cover-modeling

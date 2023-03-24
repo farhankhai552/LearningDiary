@@ -34,10 +34,12 @@
 
 -   However, it is important to note that accuracy cannot be fully perfect, therefore accuracy assessments can be carried out to improve the accuracy rating of the classification
 
--   
-
 **Reflection**
 
 -   I will admit that this week has been the most difficult for me to understand. As such, I found it difficult to make meaningful notes that I could truly learn from.
 
 -   I do however understand the need to not only properly classify data, but to ensure accuracy is at its best in order to help ensure clearest interpretation of topographic image is acquired.
+
+**References**
+
+https://www.gim-international.com/content/article/object-based-image-analysis#:\~:text=Object%2Dbased%20image%20analysis%20(OBIA,as%20spectral%2C%20shape%20and%20neighbourhood.

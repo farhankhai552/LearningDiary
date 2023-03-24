@@ -193,3 +193,7 @@
 -   Additionally, not all remotely sensed data has been image corrected (depending on sensor source).
 
 -   Ultimate goal is to eliminate any distortions to the best of our abilities to produce an image that best reflects the at-ground status of the location pictured by removing any possible factors of interference.
+
+**References**
+
+https://geolearn.in/geometric-corrections-in-remote-sensing-images/

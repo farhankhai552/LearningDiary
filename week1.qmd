@@ -33,7 +33,6 @@
 | Landsat                       | Forest fires                                   |
 | Landsat and sentinel          | Temperature studies (e.g. urban heat island)   |
 | Landsat, sentinel, and SAR    | Flooding/disaster response/building footprints |
-|                               |                                                |
 
 **Considerations when dealing with remotely sensed data**
 
@@ -63,7 +62,7 @@
 
     -   Radiometric = ability to discriminate slight differences in energy
 
-**Personal reflection**
+**Reflection**
 
 -   Introduced to the concept of remote sensing (how it works, applications in a modern setting, how it can be utilised to track global phenomena).
 
@@ -74,3 +73,7 @@
 -   Home country of Malaysia suffers from many environmental and man-made hazards.
 
 -   As someone from Southeast Asia, a region becoming increasingly prone to climate risks, the potential to provide solutions using this kind of data may help decrease and/or eliminate the collateral damage caused by natural disasters, as well as pinpoint root causes in order to form data-backed solutions.
+
+**References**
+
+https://en.wikipedia.org/wiki/Remote_sensing
