@@ -34,29 +34,35 @@
 
     -   COP26: Beat the Heat Handbook.
 
+        ![](https://www.un.org/development/desa/disabilities/wp-content/uploads/sites/15/2019/07/E-SDGs-Poster-801x476.png){width="326"}
+
 **Local Policies**
 
 -   Barcelona: Superblocks model
 
     -   Urban and transport planning strategy aimed at reducing motorised transport usage within cities and reclaim public spaces for humans.
 
--   Colombia: Medellin green Corridors
+        ![](https://www.citiesforum.org/wp-content/uploads/2021/05/aerial-view-above-of-barcelona-superblocks-spain-AAEF05622.jpg){width="378"}
+
+-   Colombia: Medellin Green Corridors
 
     -   green areas with thick vegetation are introduced along parts of the city.
 
+        ![Alcaldía de Medellín - Green Corridors Initiative \| Connecting Nature](https://oppla.eu/sites/default/files/images/case-study/screen-shot-2021-02-19-140303.png){alt="Alcaldía de Medellín - Green Corridors Initiative | Connecting Nature" width="371"}
+
 -   Australia: Turn Down the Heat Strategy and Action Plan (2018)
 
--   **City policies focusing on temperature reduction**
+**City policies focusing on temperature reduction**
 
 -   Singapore planning requirements
 
--   Fremantle\'s Urban Forest Plan\
+-   Fremantle's Urban Forest Plan
 
 **Application**
 
 -   Climate-specific policy is needed in an era of unprecedented globalisation and industrialisation, which birth city-specific problems.
 
--   Within the context of this week\'s topic, policy to address UHI issues have manifested themselves in creative ways, from structured planning guidelines in Singapore to unique urban development plans such as in Colombia and Barcelona.
+-   Within the context of this week's topic, policy to address UHI issues have manifested themselves in creative ways, from structured planning guidelines in Singapore to unique urban development plans such as in Colombia and Barcelona.
 
 -   Applications for temperature (and other climate-related) policies include: sustainable living via green spaces for humans, planning requirements that are not environmentally detrimental and that prioritise human accessibility, health preservation of humans, particularly those most prone to heat effects, development of sustainable transport options.
 
@@ -64,12 +70,12 @@
 
 -   International guidelines act as a blueprint for cities to hone in on specific development plans in line with sustainable living.
 
--   It is important to note that solutions cannot be copypasted for each city. This is because each city faces highly specific, cultural and location-based challenges. Therefore, frameworks for sustainable living within cities must be tailor-made.
+-   It is important to note that solutions cannot be copypasted for each city. This is because each city faces highly specific cultural and location-based challenges. Therefore, frameworks for sustainable living within cities must be tailor-made.
 
 -   Policies addressing current climate issues must be formed and reiterated upon to reflect modern sensibilities and solutions. As such, a dynamic and flexible framework is needed by any and all metropolitan areas.
 
--   Many countries are lacking in in-depth policy solutions which incorporate data-driven methods for more effective policy implementation.
+-   Many countries are lacking in in-depth policy solutions which incorporate data-driven methods for more effective policy implementation. As such, using modern remote sensing methods can help provide new insight towards solving city-related issues.
 
-References
+**References**
 
 https://land8.com/how-landscape-architecture-mitigates-the-urban-heat-island-effect/

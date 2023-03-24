@@ -10,6 +10,8 @@
 
     -   OBIA segments pixels together into vector objects. This allows for segmentation of land cover features in terms of spectral, spatial, and geometrical properties
 
+        ![](https://gisgeography.com/wp-content/uploads/2017/06/OBIA-object-based-image-analysis-geobia.png){width="370"}
+
 -   Sub pixel analysis
 
     -   Also known as  Sub pixel classification, Spectral Mixture Analysis (SMA), Linear spectral unmixing.
@@ -41,5 +43,7 @@
 -   I do however understand the need to not only properly classify data, but to ensure accuracy is at its best in order to help ensure clearest interpretation of topographic image is acquired.
 
 **References**
+
+https://gisgeography.com/obia-object-based-image-analysis-geobia/
 
 https://www.gim-international.com/content/article/object-based-image-analysis#:\~:text=Object%2Dbased%20image%20analysis%20(OBIA,as%20spectral%2C%20shape%20and%20neighbourhood.

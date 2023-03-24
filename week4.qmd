@@ -18,7 +18,7 @@
 
 -   Most areas of the Asian region lack sufficient observational records to draw conclusions about trends in annual precipitation over the past century (seeWGIAR5 Chapter 2; Figure 24-2;Table SM24-2).
 
-    ![Malaysia's worst flooding in years leaves 30,000 people displaced \| Malaysia \| The Guardian](https://i.guim.co.uk/img/media/06bdb8fc1e26743c31261871ee872950713b9991/0_180_5400_3240/master/5400.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=7d1559950b7e4fa09b5d19ca94d0f228){alt="Malaysia's worst flooding in years leaves 30,000 people displaced | Malaysia  | The Guardian" width="283"}\
+    ![Malaysia\'s worst flooding in years leaves 30,000 people displaced \| Malaysia \| The Guardian](https://i.guim.co.uk/img/media/06bdb8fc1e26743c31261871ee872950713b9991/0_180_5400_3240/master/5400.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=7d1559950b7e4fa09b5d19ca94d0f228){alt="Malaysia's worst flooding in years leaves 30,000 people displaced | Malaysia  | The Guardian" width="283"}\
 
 **Cornerstone of Malaysian framework creation**
 
@@ -106,6 +106,8 @@
 
         -   Malaysian Remote Sensing Agency
 
+            ![](https://assets.nst.com.my/images/articles/dsijfijas_1640076515.jpg){width="339"}
+
 **How can remotely sensed data be applied to solve policy challenges?**
 
 -   Current policy challenge
@@ -140,8 +142,7 @@
 
 -   Despite the existence of internationally ratified agreements working towards forming sustainable city policies, many developing nations are at a significant disadvantage due to a lack of prior access and technology. While richer nations (typically located in the West) may already have infrastructure in place, poorer nations are still working towards building infrastructure. As a result, their preparedness and response times to disasters are delayed.
 
-**References**
-\'CHA-Malaysia.pdf\' (no date). Available at: <https://jfit-for-science.asia/wp-content/uploads/2019/11/CHA-Malaysia.pdf> (Accessed: 19 March 2023).
+**References** 'CHA-Malaysia.pdf' (no date). Available at: <https://jfit-for-science.asia/wp-content/uploads/2019/11/CHA-Malaysia.pdf> (Accessed: 19 March 2023).
 
 Country: Malaysia (2023). Available at: <https://www.adrc.asia/management/MYS/mechanism_of_disaster_management_and_relief.html> (Accessed: 20 March 2023).
 

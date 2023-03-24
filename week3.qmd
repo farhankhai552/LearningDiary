@@ -8,9 +8,7 @@
 
 -   Needed when technical defects and deficiencies of the sensor and data transfer systems lead to mistakes in the image data construction.
 
--   Raw remotely sensed image data are full of geometric and radiometric flaws caused by the curved shape of the Earth, the imperfectly transparent atmosphere, daily and seasonal variations in the amount of solar radiation received at the surface, and imperfections in scanning instruments, etc
-
-\
+-   Raw remotely sensed image data are full of geometric and radiometric flaws caused by the curved shape of the Earth, the imperfectly transparent atmosphere, daily and seasonal variations in the amount of solar radiation received at the surface, and imperfections in scanning instruments, etc.\
 
 **Imagery correction types**
 
@@ -44,9 +42,9 @@
 
         -   To remove scattering and absorption effects of the atmosphere on the reflectance values of images taken by satellite or airborne sensors
 
-        -   2 main sources of environmental disturbance: atmos scattering & topographic attenuation (dimming and blurring effects)
+        -   2 main sources of environmental disturbance: atmospheric scattering & topographic attenuation (dimming and blurring effects)
 
-    -   Atmos correction is only necessary for certain situations:
+    -   Atmospheric correction is only necessary for certain situations:
 
         -   Spectral signature (unique wavelength radiated by an object. Different objects have different signatures) through space and time
 
@@ -66,7 +64,7 @@
 
                 -   Relative correction methods
 
-                    -   Dark object saturation = Effects of atmos scattering are removed by finding the darkest pixels in an image and subtracting their values from all other pixels
+                    -   Dark object saturation = Effects of atmospheric scattering are removed by finding the darkest pixels in an image and subtracting their values from all other pixels
 
                     -   Pseudo-invariant features = technique is based on the statistical invariance of the reflectance of man-made in-scene elements such as concrete, asphalt, and rooftops. Differences in the grey-level distributions of these invariant objects is assumed to be a linear function and is corrected statistically to perform the normalisation. The technique exhibits errors in reflectance of approximately 1% for Landsat TM and high-resolution air photo imagery in all spectral regions studied
 
@@ -136,6 +134,8 @@
 
     -   Image mosaicing is often a necessary process **to cover a large and full region of interest (ROI) for many remote sensing applications** (e.g., geographical mapping, resource and environmental monitoring, and disaster monitoring).
 
+        ![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/GUID-AB98D726-C601-44F5-A07E-41F5482FC8E4-web.png){width="316"}
+
 -   How it's done
 
     -   Overlapping of different images
@@ -178,6 +178,8 @@
 
 -   **Spectral signature** = unique wavelength radiated by an object.
 
+    ![](https://es.mathworks.com/help/images/atmosphericcorrection.png){width="386"}
+
 **Applications**
 
 -   Raw remotely sensed image data are full of geometric and radiometric flaws caused by the curved shape of the Earth, the imperfectly transparent atmosphere, daily and seasonal variations in the amount of solar radiation received at the surface, and imperfections in scanning instruments, among other things.
@@ -195,5 +197,9 @@
 -   Ultimate goal is to eliminate any distortions to the best of our abilities to produce an image that best reflects the at-ground status of the location pictured by removing any possible factors of interference.
 
 **References**
+
+https://es.mathworks.com/help/images/hyperspectral-data-correction.html
+
+https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/what-is-a-mosaic.htm
 
 https://geolearn.in/geometric-corrections-in-remote-sensing-images/

@@ -25,7 +25,7 @@
 **What are its applications?**
 
 | Source                        | Applications                                   |
-|-----------------------------|-------------------------------------------|
+|-------------------------------|------------------------------------------------|
 | Dynamic world (sentinel data) | Near real-time cover dataset (10m resolution)  |
 | Landsat                       | Urban/green space coverage and accessibility   |
 | Sentinel                      | Pollution studies                              |
